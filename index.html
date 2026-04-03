@@ -24,8 +24,11 @@ scroll-behavior: smooth;
 header {
 position: fixed;
 width: 100%;
-background: rgba(0,0,0,0.8);
+background: rgba(0,0,0,0.9);
 padding: 15px 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 z-index: 1000;
 }
 
@@ -71,10 +74,10 @@ border-radius: 5px;
 }
 
 section {
-padding: 80px 50px;
+padding: 100px 50px;
 }
 
-h2.section-title {
+.section-title {
 color: #00aaff;
 margin-bottom: 20px;
 }
@@ -82,56 +85,21 @@ margin-bottom: 20px;
 .card {
 background: #111827;
 padding: 20px;
-margin: 10px;
 border-radius: 10px;
 }
 
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.chatbot {
-position: fixed;
-bottom: 20px;
-right: 20px;
-}
-
-.chatbox {
-width: 300px;
-height: 400px;
-background: #111827;
-border-radius: 10px;
-display: none;
-flex-direction: column;
-}
-
-.chat-header {
-background: #00aaff;
+select {
 padding: 10px;
-}
-
-.chat-messages {
-flex: 1;
-padding: 10px;
-overflow-y: auto;
-}
-
-.chat-input {
-display: flex;
-}
-
-.chat-input input {
-flex: 1;
-padding: 10px;
+border-radius: 5px;
 border: none;
 }
 
-.chat-input button {
-background: #00aaff;
+input, textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 5px;
 border: none;
-color: white;
-padding: 10px;
 }
 
 footer {
@@ -155,136 +123,138 @@ background: black;
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <div class="hero-content">
 <h2>Engineering Excellence | Quality Leadership | Project Delivery</h2>
-<p>Instrumentation Engineer | Technical & Quality Manager | 14+ Years Experience</p>
-<button class="btn">View My Work</button>
-<button class="btn">Contact Me</button>
+<p>Instrumentation Engineer | Technical Manager | Project Manager</p>
+<a href="#contact"><button class="btn">Contact Me</button></a>
 </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2 class="section-title">About Me</h2>
 <p>
-My name is Umaid Mohiuddin Mohammad. With over 14+ years in Oil & Gas, Power Plants, and Industrial Engineering,
-I have grown from an Instrumentation Engineer to Technical & Quality Manager.
+My name is Umaid Mohiuddin Mohammad. I am an Instrumentation Engineer with over 14+ years of experience
+in Oil & Gas, Power Plants, Refineries, and Industrial Projects.
 </p>
 <p>
-I have worked on major projects including Sadara Chemical Plant and Saudi Aramco facilities,
-leading engineering, quality, and project execution teams.
+I started my journey as an Instrumentation Engineer and progressed to Technical Lead, Technical Manager,
+and now Project Manager, handling engineering execution and quality management for major projects including Saudi Aramco.
 </p>
 </section>
 
+<!-- DISCIPLINES -->
 <section id="disciplines">
 <h2 class="section-title">Engineering Disciplines</h2>
-<div class="grid">
 
-<div class="card"><h3>Instrumentation</h3>
-<p>Control systems, PLCs, DCS, field instruments, loop drawings, SPI tools.</p></div>
+<select onchange="showDiscipline(this.value)">
+<option value="">Select Discipline</option>
+<option value="instrumentation">Instrumentation Engineering</option>
+<option value="electrical">Electrical Engineering</option>
+<option value="mechanical">Mechanical Engineering</option>
+<option value="process">Process Engineering</option>
+<option value="piping">Piping Engineering</option>
+<option value="civil">Civil & Structural</option>
+<option value="telecom">Telecommunications</option>
+</select>
 
-<div class="card"><h3>Electrical</h3>
-<p>Power distribution, transformers, switchgear, protection systems.</p></div>
-
-<div class="card"><h3>Piping</h3>
-<p>P&IDs, layouts, stress analysis, S3D modeling.</p></div>
-
-<div class="card"><h3>Mechanical</h3>
-<p>Static & rotating equipment design and calculations.</p></div>
-
-<div class="card"><h3>Process</h3>
-<p>Process design, simulations, HAZOP, process flow diagrams.</p></div>
-
-<div class="card"><h3>Civil & Structural</h3>
-<p>Foundations, steel structures, site development.</p></div>
-
+<div id="discipline-box" class="card" style="margin-top:20px; display:none;">
+<h3 id="discipline-title"></h3>
+<div id="discipline-content"></div>
 </div>
+
 </section>
 
+<!-- LIFECYCLE -->
 <section id="lifecycle">
 <h2 class="section-title">Project Lifecycle</h2>
-<div class="grid">
-<div class="card">Concept & Feasibility</div>
-<div class="card">FEED</div>
-<div class="card">Detailed Engineering</div>
-<div class="card">Procurement</div>
-<div class="card">Construction</div>
-<div class="card">Commissioning</div>
-<div class="card">Operation & Maintenance</div>
-</div>
+<p>
+Concept → FEED → Detailed Engineering → Procurement → Construction → Commissioning → Operation.
+</p>
 </section>
 
+<!-- QUALITY -->
 <section id="quality">
 <h2 class="section-title">Quality Management</h2>
 <p>
-ISO Standards, Audits, KPIs, Continuous Improvement, Engineering Quality Checks.
-</p>
-<p>
-As Quality Manager, I ensure compliance with Saudi Aramco standards and project excellence.
+Ensuring ISO compliance, audits, KPIs, and engineering excellence across all projects.
 </p>
 </section>
 
-<section id="tools">
-<h2 class="section-title">Tools & Technologies</h2>
-<ul>
-<li>Microstation</li>
-<li>SPPID / SPI / SPEL / S3D</li>
-<li>SAP</li>
-<li>Engineering Design Software</li>
-</ul>
-</section>
-
+<!-- CONTACT -->
 <section id="contact">
 <h2 class="section-title">Contact Me</h2>
-<input type="text" placeholder="Your Name"><br><br>
-<input type="email" placeholder="Your Email"><br><br>
-<textarea placeholder="Message"></textarea><br><br>
-<button class="btn">Send Message</button>
+
+<form action="https://formsubmit.co/mail2umaidz@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<input type="hidden" name="_subject" value="New Contact from Website!">
+<input type="hidden" name="_captcha" value="false">
+
+<button class="btn" type="submit">Send Message</button>
+
+</form>
+
 </section>
 
-<div class="chatbot">
-<button class="btn" onclick="toggleChat()">Ask Umaid</button>
-
-<div class="chatbox" id="chatbox">
-<div class="chat-header">Ask Umaid Engineer</div>
-<div class="chat-messages" id="messages"></div>
-<div class="chat-input">
-<input type="text" id="userInput">
-<button onclick="sendMessage()">Send</button>
-</div>
-</div>
-</div>
-
 <footer>
-<p>© 2026 Umaid Engineer | Engineering Leadership</p>
+<p>© 2026 Umaid Engineer</p>
 </footer>
 
 <script>
-function toggleChat() {
-let box = document.getElementById('chatbox');
-box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+function showDiscipline(value){
+
+let box = document.getElementById("discipline-box");
+let title = document.getElementById("discipline-title");
+let content = document.getElementById("discipline-content");
+
+box.style.display = "block";
+
+if(value === "instrumentation"){
+title.innerText = "Instrumentation Engineering";
+content.innerHTML = `
+<p><b>Role:</b> Automation and control systems.</p>
+<p><b>Responsibilities:</b> PLC, DCS, instruments.</p>
+<p><b>Deliverables:</b> Loop diagrams, datasheets.</p>
+<p><i>Add more details here later...</i></p>
+`;
 }
 
-function sendMessage() {
-let input = document.getElementById('userInput');
-let msg = input.value;
-
-let messages = document.getElementById('messages');
-messages.innerHTML += "<p><b>You:</b> " + msg + "</p>";
-
-let reply = "I specialize in Engineering, Project Lifecycle, and Quality Management.";
-
-if(msg.toLowerCase().includes("lifecycle")){
-reply = "Project lifecycle includes FEED, Engineering, Procurement, Construction, and Commissioning.";
+else if(value === "electrical"){
+title.innerText = "Electrical Engineering";
+content.innerHTML = `<p>Power systems, transformers, switchgear.</p>`;
 }
 
-if(msg.toLowerCase().includes("quality")){
-reply = "Quality ensures ISO compliance, audits, and engineering excellence.";
+else if(value === "mechanical"){
+title.innerText = "Mechanical Engineering";
+content.innerHTML = `<p>Equipment design and analysis.</p>`;
 }
 
-messages.innerHTML += "<p><b>Umaid:</b> " + reply + "</p>";
+else if(value === "process"){
+title.innerText = "Process Engineering";
+content.innerHTML = `<p>Process design, HAZOP, simulations.</p>`;
+}
 
-input.value = "";
+else if(value === "piping"){
+title.innerText = "Piping Engineering";
+content.innerHTML = `<p>P&IDs, layouts, stress analysis.</p>`;
+}
+
+else if(value === "civil"){
+title.innerText = "Civil & Structural";
+content.innerHTML = `<p>Foundations and structures.</p>`;
+}
+
+else if(value === "telecom"){
+title.innerText = "Telecommunications";
+content.innerHTML = `<p>Industrial communication systems.</p>`;
+}
+
 }
 </script>
 
