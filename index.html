@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umaid Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: #0b0f1a;
+color: #fff;
+scroll-behavior: smooth;
+}
+
+header {
+position: fixed;
+width: 100%;
+background: rgba(0,0,0,0.8);
+padding: 15px 50px;
+z-index: 1000;
+}
+
+header h1 {
+color: #00aaff;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+}
+
+.hero {
+height: 100vh;
+background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1581093458791-9c8d7a1e4a5c') center/cover;
+display: flex;
+align-items: center;
+padding: 50px;
+}
+
+.hero-content {
+max-width: 600px;
+}
+
+.hero h2 {
+font-size: 3rem;
+}
+
+.hero p {
+margin: 20px 0;
+}
+
+.btn {
+padding: 12px 25px;
+margin-right: 10px;
+border: none;
+background: #00aaff;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+}
+
+section {
+padding: 80px 50px;
+}
+
+h2.section-title {
+color: #00aaff;
+margin-bottom: 20px;
+}
+
+.card {
+background: #111827;
+padding: 20px;
+margin: 10px;
+border-radius: 10px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.chatbot {
+position: fixed;
+bottom: 20px;
+right: 20px;
+}
+
+.chatbox {
+width: 300px;
+height: 400px;
+background: #111827;
+border-radius: 10px;
+display: none;
+flex-direction: column;
+}
+
+.chat-header {
+background: #00aaff;
+padding: 10px;
+}
+
+.chat-messages {
+flex: 1;
+padding: 10px;
+overflow-y: auto;
+}
+
+.chat-input {
+display: flex;
+}
+
+.chat-input input {
+flex: 1;
+padding: 10px;
+border: none;
+}
+
+.chat-input button {
+background: #00aaff;
+border: none;
+color: white;
+padding: 10px;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+background: black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Umaid Engineer</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#disciplines">Disciplines</a>
+<a href="#lifecycle">Lifecycle</a>
+<a href="#quality">Quality</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h2>Engineering Excellence | Quality Leadership | Project Delivery</h2>
+<p>Instrumentation Engineer | Technical & Quality Manager | 14+ Years Experience</p>
+<button class="btn">View My Work</button>
+<button class="btn">Contact Me</button>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p>
+My name is Umaid Mohiuddin Mohammad. With over 14+ years in Oil & Gas, Power Plants, and Industrial Engineering,
+I have grown from an Instrumentation Engineer to Technical & Quality Manager.
+</p>
+<p>
+I have worked on major projects including Sadara Chemical Plant and Saudi Aramco facilities,
+leading engineering, quality, and project execution teams.
+</p>
+</section>
+
+<section id="disciplines">
+<h2 class="section-title">Engineering Disciplines</h2>
+<div class="grid">
+
+<div class="card"><h3>Instrumentation</h3>
+<p>Control systems, PLCs, DCS, field instruments, loop drawings, SPI tools.</p></div>
+
+<div class="card"><h3>Electrical</h3>
+<p>Power distribution, transformers, switchgear, protection systems.</p></div>
+
+<div class="card"><h3>Piping</h3>
+<p>P&IDs, layouts, stress analysis, S3D modeling.</p></div>
+
+<div class="card"><h3>Mechanical</h3>
+<p>Static & rotating equipment design and calculations.</p></div>
+
+<div class="card"><h3>Process</h3>
+<p>Process design, simulations, HAZOP, process flow diagrams.</p></div>
+
+<div class="card"><h3>Civil & Structural</h3>
+<p>Foundations, steel structures, site development.</p></div>
+
+</div>
+</section>
+
+<section id="lifecycle">
+<h2 class="section-title">Project Lifecycle</h2>
+<div class="grid">
+<div class="card">Concept & Feasibility</div>
+<div class="card">FEED</div>
+<div class="card">Detailed Engineering</div>
+<div class="card">Procurement</div>
+<div class="card">Construction</div>
+<div class="card">Commissioning</div>
+<div class="card">Operation & Maintenance</div>
+</div>
+</section>
+
+<section id="quality">
+<h2 class="section-title">Quality Management</h2>
+<p>
+ISO Standards, Audits, KPIs, Continuous Improvement, Engineering Quality Checks.
+</p>
+<p>
+As Quality Manager, I ensure compliance with Saudi Aramco standards and project excellence.
+</p>
+</section>
+
+<section id="tools">
+<h2 class="section-title">Tools & Technologies</h2>
+<ul>
+<li>Microstation</li>
+<li>SPPID / SPI / SPEL / S3D</li>
+<li>SAP</li>
+<li>Engineering Design Software</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+<input type="text" placeholder="Your Name"><br><br>
+<input type="email" placeholder="Your Email"><br><br>
+<textarea placeholder="Message"></textarea><br><br>
+<button class="btn">Send Message</button>
+</section>
+
+<div class="chatbot">
+<button class="btn" onclick="toggleChat()">Ask Umaid</button>
+
+<div class="chatbox" id="chatbox">
+<div class="chat-header">Ask Umaid Engineer</div>
+<div class="chat-messages" id="messages"></div>
+<div class="chat-input">
+<input type="text" id="userInput">
+<button onclick="sendMessage()">Send</button>
+</div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Umaid Engineer | Engineering Leadership</p>
+</footer>
+
+<script>
+function toggleChat() {
+let box = document.getElementById('chatbox');
+box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function sendMessage() {
+let input = document.getElementById('userInput');
+let msg = input.value;
+
+let messages = document.getElementById('messages');
+messages.innerHTML += "<p><b>You:</b> " + msg + "</p>";
+
+let reply = "I specialize in Engineering, Project Lifecycle, and Quality Management.";
+
+if(msg.toLowerCase().includes("lifecycle")){
+reply = "Project lifecycle includes FEED, Engineering, Procurement, Construction, and Commissioning.";
+}
+
+if(msg.toLowerCase().includes("quality")){
+reply = "Quality ensures ISO compliance, audits, and engineering excellence.";
+}
+
+messages.innerHTML += "<p><b>Umaid:</b> " + reply + "</p>";
+
+input.value = "";
+}
+</script>
+
+</body>
+</html>
