@@ -5,129 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Umaid Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
 body {
-font-family: 'Poppins', sans-serif;
-background: #0b0f1a;
-color: #fff;
-scroll-behavior: smooth;
+margin:0;
+font-family:Poppins;
+background:#0a0f1c;
+color:white;
 }
 
-header {
-position: fixed;
-width: 100%;
-background: rgba(0,0,0,0.9);
-padding: 15px 50px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 1000;
+/* NAVBAR */
+.navbar {
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.9);
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+z-index:1000;
 }
 
-header h1 {
-color: #00aaff;
+.navbar a {
+color:white;
+margin:0 10px;
+text-decoration:none;
 }
 
-nav a {
-color: white;
-margin: 0 15px;
-text-decoration: none;
-}
-
+/* HERO */
 .hero {
-height: 100vh;
-background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1581093458791-9c8d7a1e4a5c') center/cover;
-display: flex;
-align-items: center;
-padding: 50px;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1509395176047-4a66953fd231') center/cover;
+display:flex;
+align-items:center;
+padding:50px;
 }
 
-.hero-content {
-max-width: 600px;
-}
-
-.hero h2 {
-font-size: 3rem;
-}
-
-.hero p {
-margin: 20px 0;
+.hero h1 {
+font-size:3rem;
 }
 
 .btn {
-padding: 12px 25px;
-margin-right: 10px;
-border: none;
-background: #00aaff;
-color: white;
-cursor: pointer;
-border-radius: 5px;
+background:#00aaff;
+border:none;
+padding:12px 25px;
+color:white;
+border-radius:5px;
+cursor:pointer;
 }
 
+/* SECTIONS */
 section {
-padding: 100px 50px;
+padding:100px 50px;
 }
 
 .section-title {
-color: #00aaff;
-margin-bottom: 20px;
+color:#00aaff;
+margin-bottom:20px;
 }
 
+/* CARDS */
 .card {
-background: #111827;
-padding: 20px;
-border-radius: 10px;
+background:#111827;
+padding:20px;
+border-radius:10px;
+margin:10px 0;
 }
 
-select {
-padding: 10px;
-border-radius: 5px;
-border: none;
+/* TABS */
+.tabs {
+display:flex;
+flex-wrap:wrap;
 }
 
+.tabs button {
+background:#111827;
+color:white;
+border:none;
+padding:10px 15px;
+margin:5px;
+cursor:pointer;
+}
+
+/* CONTENT BOX */
+.tab-content {
+margin-top:20px;
+background:#111827;
+padding:30px;
+border-radius:10px;
+min-height:250px;
+}
+
+/* GALLERY */
+.gallery {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:15px;
+}
+
+.gallery img {
+width:100%;
+border-radius:10px;
+}
+
+/* CONTACT */
 input, textarea {
-width: 100%;
-padding: 12px;
-margin-bottom: 10px;
-border-radius: 5px;
-border: none;
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
 }
 
 footer {
-text-align: center;
-padding: 20px;
-background: black;
+text-align:center;
+padding:20px;
+background:black;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Umaid Engineer</h1>
-<nav>
+<div class="navbar">
+<h2>Umaid Engineer</h2>
+<div>
 <a href="#about">About</a>
 <a href="#disciplines">Disciplines</a>
 <a href="#lifecycle">Lifecycle</a>
-<a href="#quality">Quality</a>
+<a href="#epc">EPC</a>
+<a href="#projects">Projects</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
-</nav>
-</header>
+</div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-content">
-<h2>Engineering Excellence | Quality Leadership | Project Delivery</h2>
-<p>Instrumentation Engineer | Technical Manager | Project Manager</p>
+<div>
+<h1>Engineering Excellence | Quality Leadership | Project Delivery</h1>
+<p>Technical Manager | Project Manager | 14+ Years Experience in Oil & Gas</p>
 <a href="#contact"><button class="btn">Contact Me</button></a>
 </div>
 </section>
@@ -136,12 +154,12 @@ background: black;
 <section id="about">
 <h2 class="section-title">About Me</h2>
 <p>
-My name is Umaid Mohiuddin Mohammad. I am an Instrumentation Engineer with over 14+ years of experience
-in Oil & Gas, Power Plants, Refineries, and Industrial Projects.
+Instrumentation Engineer with 14+ years of experience across Oil & Gas, Refineries,
+Power Plants, and Industrial Projects including Saudi Aramco and Sadara.
 </p>
 <p>
-I started my journey as an Instrumentation Engineer and progressed to Technical Lead, Technical Manager,
-and now Project Manager, handling engineering execution and quality management for major projects including Saudi Aramco.
+Progressed from Engineer → Lead → Technical Manager → Project Manager,
+handling engineering execution, quality, and project delivery.
 </p>
 </section>
 
@@ -149,20 +167,49 @@ and now Project Manager, handling engineering execution and quality management f
 <section id="disciplines">
 <h2 class="section-title">Engineering Disciplines</h2>
 
-<select onchange="showDiscipline(this.value)">
-<option value="">Select Discipline</option>
-<option value="instrumentation">Instrumentation Engineering</option>
-<option value="electrical">Electrical Engineering</option>
-<option value="mechanical">Mechanical Engineering</option>
-<option value="process">Process Engineering</option>
-<option value="piping">Piping Engineering</option>
-<option value="civil">Civil & Structural</option>
-<option value="telecom">Telecommunications</option>
-</select>
+<div class="tabs">
+<button onclick="openTab('inst')">Instrumentation</button>
+<button onclick="openTab('elec')">Electrical</button>
+<button onclick="openTab('mech')">Mechanical</button>
+<button onclick="openTab('proc')">Process</button>
+<button onclick="openTab('pipe')">Piping</button>
+<button onclick="openTab('civil')">Civil</button>
+<button onclick="openTab('telecom')">Telecom</button>
+</div>
 
-<div id="discipline-box" class="card" style="margin-top:20px; display:none;">
-<h3 id="discipline-title"></h3>
-<div id="discipline-content"></div>
+<div id="inst" class="tab-content">
+<h3>Instrumentation Engineering</h3>
+<p>👉 Add full detailed content here later (roles, standards, SPI, SPPID, case studies).</p>
+</div>
+
+<div id="elec" class="tab-content" style="display:none;">
+<h3>Electrical Engineering</h3>
+<p>Expandable content area.</p>
+</div>
+
+<div id="mech" class="tab-content" style="display:none;">
+<h3>Mechanical Engineering</h3>
+<p>Expandable content area.</p>
+</div>
+
+<div id="proc" class="tab-content" style="display:none;">
+<h3>Process Engineering</h3>
+<p>Expandable content area.</p>
+</div>
+
+<div id="pipe" class="tab-content" style="display:none;">
+<h3>Piping Engineering</h3>
+<p>Expandable content area.</p>
+</div>
+
+<div id="civil" class="tab-content" style="display:none;">
+<h3>Civil & Structural</h3>
+<p>Expandable content area.</p>
+</div>
+
+<div id="telecom" class="tab-content" style="display:none;">
+<h3>Telecommunications</h3>
+<p>Expandable content area.</p>
 </div>
 
 </section>
@@ -171,16 +218,65 @@ and now Project Manager, handling engineering execution and quality management f
 <section id="lifecycle">
 <h2 class="section-title">Project Lifecycle</h2>
 <p>
-Concept → FEED → Detailed Engineering → Procurement → Construction → Commissioning → Operation.
+Concept → FEED → Detailed Engineering → Procurement → Construction → Commissioning → Operation
 </p>
 </section>
 
-<!-- QUALITY -->
-<section id="quality">
-<h2 class="section-title">Quality Management</h2>
-<p>
-Ensuring ISO compliance, audits, KPIs, and engineering excellence across all projects.
-</p>
+<!-- EPC -->
+<section id="epc">
+<h2 class="section-title">EPC Workflow</h2>
+
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+<div class="card" onclick="showEPC('eng')"><h3>Engineering</h3></div>
+<div class="card" onclick="showEPC('proc')"><h3>Procurement</h3></div>
+<div class="card" onclick="showEPC('const')"><h3>Construction</h3></div>
+
+</div>
+
+<div id="epc-content" class="tab-content">
+<p>Click a stage to view details.</p>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Project Experience</h2>
+
+<div class="card">
+<h3>Oil & Gas Projects</h3>
+<p>Saudi Aramco | Technical Manager | Engineering Digitization & SAP</p>
+</div>
+
+<div class="card">
+<h3>Power Plants</h3>
+<p>Instrumentation, commissioning, control systems</p>
+</div>
+
+<div class="card">
+<h3>Chemical Plants</h3>
+<p>Sadara Project | Field instrumentation</p>
+</div>
+
+<div class="card">
+<h3>Refineries</h3>
+<p>Process instrumentation & compliance</p>
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2 class="section-title">Industrial Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+<img src="https://images.unsplash.com/photo-1581093458791-9c8d7a1e4a5c">
+<img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+</div>
+
 </section>
 
 <!-- CONTACT -->
@@ -188,78 +284,41 @@ Ensuring ISO compliance, audits, KPIs, and engineering excellence across all pro
 <h2 class="section-title">Contact Me</h2>
 
 <form action="https://formsubmit.co/mail2umaidz@gmail.com" method="POST">
-
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Your Email" required>
-
 <textarea name="message" placeholder="Your Message" required></textarea>
 
-<!-- Hidden settings -->
 <input type="hidden" name="_subject" value="New Contact from Website!">
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
 
 <button class="btn" type="submit">Send Message</button>
-
 </form>
 
 </section>
 
-
 <footer>
-<p>© 2026 Umaid Engineer</p>
+<p>© 2026 Umaid Engineer | Engineering Leadership</p>
 </footer>
 
 <script>
-function showDiscipline(value){
-
-let box = document.getElementById("discipline-box");
-let title = document.getElementById("discipline-title");
-let content = document.getElementById("discipline-content");
-
-box.style.display = "block";
-
-if(value === "instrumentation"){
-title.innerText = "Instrumentation Engineering";
-content.innerHTML = `
-<p><b>Role:</b> Automation and control systems.</p>
-<p><b>Responsibilities:</b> PLC, DCS, instruments.</p>
-<p><b>Deliverables:</b> Loop diagrams, datasheets.</p>
-<p><i>Add more details here later...</i></p>
-`;
+function openTab(tab){
+let tabs=document.querySelectorAll(".tab-content");
+tabs.forEach(t=>t.style.display="none");
+document.getElementById(tab).style.display="block";
 }
 
-else if(value === "electrical"){
-title.innerText = "Electrical Engineering";
-content.innerHTML = `<p>Power systems, transformers, switchgear.</p>`;
-}
+function showEPC(stage){
+let box=document.getElementById("epc-content");
 
-else if(value === "mechanical"){
-title.innerText = "Mechanical Engineering";
-content.innerHTML = `<p>Equipment design and analysis.</p>`;
+if(stage==="eng"){
+box.innerHTML="<h3>Engineering</h3><p>Design, drawings, FEED, detailed engineering.</p>";
 }
-
-else if(value === "process"){
-title.innerText = "Process Engineering";
-content.innerHTML = `<p>Process design, HAZOP, simulations.</p>`;
+if(stage==="proc"){
+box.innerHTML="<h3>Procurement</h3><p>Vendor coordination, materials, approvals.</p>";
 }
-
-else if(value === "piping"){
-title.innerText = "Piping Engineering";
-content.innerHTML = `<p>P&IDs, layouts, stress analysis.</p>`;
+if(stage==="const"){
+box.innerHTML="<h3>Construction</h3><p>Execution, installation, commissioning.</p>";
 }
-
-else if(value === "civil"){
-title.innerText = "Civil & Structural";
-content.innerHTML = `<p>Foundations and structures.</p>`;
-}
-
-else if(value === "telecom"){
-title.innerText = "Telecommunications";
-content.innerHTML = `<p>Industrial communication systems.</p>`;
-}
-
 }
 </script>
 
